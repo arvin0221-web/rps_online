@@ -31,11 +31,12 @@ return Object.keys(rules);
 
 
 io.on("connection", socket => {
-socket.on("joinRoom", ({ name, room }) => {
-socket.name = name;
-socket.room = room;
-socket.isAdmin = name === ADMIN_NAME;
-
+   socket.on("joinRoom", ({ name, room }) => {
+     socket.name = name;
+     socket.room = room;
+     socket.isAdmin = name === ADMIN_NAME;
+   });
+});
 
 if (!rooms[room]) rooms[room] = [];
 if (rooms[room].length >= 2) return;
