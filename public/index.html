@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>線上剪刀石頭布</title>
+</head>
+<body>
+<input id="name" placeholder="暱稱" />
+<input id="room" placeholder="房間名稱" />
+<button onclick="join()">加入</button>
+
+
+<div id="game" style="display:none">
+<div id="buttons"></div>
+<p id="log"></p>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+</body>
+</html>
